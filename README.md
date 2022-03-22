@@ -25,8 +25,6 @@ Y para activar el entorno se usa:
 
 ## Librerias
 Instalar librerías desde requirements.txt ```pip install -r requirements.txt```
-## Migraciones
-```python manage.py makemigrations```
-```python manage.py migrate```
+
 ## Runserver
 ```python manage.py runserver```
