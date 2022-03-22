@@ -1,0 +1,57 @@
+{% extends 'base.html' %} {% block content %}
+<form method="POST" class="" action="/juegos/add">
+	{% csrf_token %}
+	<div class="container">
+		<br />
+		<div class="form-group row">
+			<label class="col-sm-1 col-form-label"></label>
+			<div class="col-sm-4">
+				<h3>Agregar Juego nuevo</h3>
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">Nombre:</label>
+			<div class="col-sm-4">
+				<input
+					type="text"
+					name="nombre"
+					id="id_nombre"
+					required
+					maxlength="50"
+				/>
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">Plataforma:</label>
+			<div class="col-sm-4">
+				<input
+					type="text"
+					name="plataforma"
+					id="id_plataforma"
+					required
+					maxlength="50"
+				/>
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">Precio:</label>
+			<div class="col-sm-4">
+				<input type="number" name="precio" id="id_precio" required />
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">Stock:</label>
+			<div class="col-sm-4">
+				<input type="number" name="stock" id="stock" required />
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-1 col-form-label"></label>
+			<div class="col-sm-4">
+				<button type="submit" class="btn btn-primary">Guardar</button>
+				<a href="/juegos" class="btn btn-secondary">Volver</a>
+			</div>
+		</div>
+	</div>
+</form>
+{% endblock %}
